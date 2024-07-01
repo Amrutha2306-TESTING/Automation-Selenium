@@ -1,0 +1,117 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363) at pc=0x00007ffd686a4f69, pid=17536, tid=3680
+#
+# JRE version: OpenJDK Runtime Environment (16.0.2+7) (build 16.0.2+7-67)
+# Java VM: OpenJDK 64-Bit Server VM (16.0.2+7-67, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [KERNELBASE.dll+0x34f69]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -javaagent:C:\Users\grastogi\eclipse\java-2021-06\eclipse\configuration\org.eclipse.osgi\715\0\.cp\jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=62058 -Dfile.encoding=Cp1252 -XX:+ShowCodeDetailsInExceptionMessages -Xrunjvmhook -Xbootclasspath/a:C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin\java_shared\classes\jasmine.jar org.testng.remote.RemoteTestNG -serport 62059 -protocol json -d C:\Users\grastogi\Downloads\Selenium Base Framework\SeleniumFramework V1\test-output C:\Users\grastogi\AppData\Local\Temp\testng-eclipse--1574379431\testng-customsuite.xml
+
+Host: Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1503)
+Time: Tue Feb 22 11:48:33 2022 India Standard Time elapsed time: 1.405991 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000017e75edde00):  JavaThread "main" [_thread_in_native, id=3680, stack(0x0000003055000000,0x0000003055100000)]
+
+Stack: [0x0000003055000000,0x0000003055100000],  sp=0x00000030550fc1c0,  free space=1008k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0x34f69]
+C  [VCRUNTIME140.dll+0x6220]
+C  [jvmhook.dll+0x137b3]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader.defineClass1(Ljava/lang/ClassLoader;Ljava/lang/String;[BIILjava/security/ProtectionDomain;Ljava/lang/String;)Ljava/lang/Class;+0 java.base@16.0.2
+j  java.lang.ClassLoader.defineClass(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;+27 java.base@16.0.2
+j  java.lang.ClassLoader.defineClass(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/lang/Class;+38 java.base@16.0.2
+j  java.security.SecureClassLoader.defineClass(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/CodeSource;)Ljava/lang/Class;+8 java.base@16.0.2
+j  jdk.internal.loader.BuiltinClassLoader.defineClass(Ljava/lang/String;Ljdk/internal/loader/BuiltinClassLoader$LoadedModule;)Ljava/lang/Class;+127 java.base@16.0.2
+j  jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(Ljdk/internal/loader/BuiltinClassLoader$LoadedModule;Ljava/lang/String;)Ljava/lang/Class;+9 java.base@16.0.2
+j  jdk.internal.loader.BuiltinClassLoader.findClass(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Class;+42 java.base@16.0.2
+j  java.lang.ClassLoader.loadClass(Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class;+26 java.base@16.0.2
+j  java.lang.Class.forName(Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class;+81 java.base@16.0.2
+j  java.util.ServiceLoader.loadProvider(Ljdk/internal/module/ServicesCatalog$ServiceProvider;)Ljava/util/ServiceLoader$Provider;+38 java.base@16.0.2
+j  java.util.ServiceLoader$ModuleServicesLookupIterator.hasNext()Z+79 java.base@16.0.2
+j  java.util.ServiceLoader$2.hasNext()Z+4 java.base@16.0.2
+j  java.util.ServiceLoader$3.hasNext()Z+32 java.base@16.0.2
+j  sun.security.jca.ProviderConfig$ProviderLoader.load(Ljava/lang/String;)Ljava/security/Provider;+45 java.base@16.0.2
+j  sun.security.jca.ProviderConfig$3.run()Ljava/security/Provider;+44 java.base@16.0.2
+j  sun.security.jca.ProviderConfig$3.run()Ljava/lang/Object;+1 java.base@16.0.2
+j  java.security.AccessController.executePrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/lang/Class;)Ljava/lang/Object;+29 java.base@16.0.2
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;+5 java.base@16.0.2
+j  sun.security.jca.ProviderConfig.doLoadProvider()Ljava/security/Provider;+8 java.base@16.0.2
+j  sun.security.jca.ProviderConfig.getProvider()Ljava/security/Provider;+258 java.base@16.0.2
+j  sun.security.jca.ProviderList.getProvider(I)Ljava/security/Provider;+6 java.base@16.0.2
+j  sun.security.jca.ProviderList.getService(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Provider$Service;+90 java.base@16.0.2
+j  sun.security.jca.GetInstance.getInstance(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;)Lsun/security/jca/GetInstance$Instance;+7 java.base@16.0.2
+j  javax.net.ssl.SSLContext.getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;+12 java.base@16.0.2
+j  javax.net.ssl.SSLContext.getDefault()Ljavax/net/ssl/SSLContext;+10 java.base@16.0.2
+j  javax.net.ssl.SSLSocketFactory.getDefault()Ljavax/net/SocketFactory;+10 java.base@16.0.2
+j  javax.net.ssl.HttpsURLConnection.getDefaultSSLSocketFactory()Ljavax/net/ssl/SSLSocketFactory;+6 java.base@16.0.2
+j  javax.net.ssl.HttpsURLConnection.<init>(Ljava/net/URL;)V+13 java.base@16.0.2
+j  sun.net.www.protocol.https.HttpsURLConnectionImpl.<init>(Ljava/net/URL;Ljava/net/Proxy;Lsun/net/www/protocol/https/Handler;)V+5 java.base@16.0.2
+j  sun.net.www.protocol.https.Handler.openConnection(Ljava/net/URL;Ljava/net/Proxy;)Ljava/net/URLConnection;+7 java.base@16.0.2
+j  sun.net.www.protocol.https.Handler.openConnection(Ljava/net/URL;)Ljava/net/URLConnection;+6 java.base@16.0.2
+j  java.net.URL.openConnection()Ljava/net/URLConnection;+5 java.base@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(ZLjava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;ZZ)Ljava/lang/String;+99 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startEntity(ZLjava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;ZZ)V+8 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startDTDEntity(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+8 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl.setInputSource(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+70 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(Z)Z+614 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next()I+2 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next()I+873 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next()I+4 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next()I+31 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Z)Z+312 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Z)Z+121 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+30 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+76 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Lorg/xml/sax/InputSource;)V+44 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Lorg/xml/sax/InputSource;)V+53 java.xml@16.0.2
+j  com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Lorg/xml/sax/InputSource;Lorg/xml/sax/helpers/DefaultHandler;)V+61 java.xml@16.0.2
+j  javax.xml.parsers.SAXParser.parse(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)V+26 java.xml@16.0.2
+j  org.testng.xml.XMLParser.parse(Ljava/io/InputStream;Lorg/xml/sax/helpers/DefaultHandler;)V+20
+j  org.testng.xml.SuiteXmlParser.parse(Ljava/lang/String;Ljava/io/InputStream;Z)Lorg/testng/xml/XmlSuite;+25
+j  org.testng.xml.SuiteXmlParser.parse(Ljava/lang/String;Ljava/io/InputStream;Z)Ljava/lang/Object;+9
+j  org.testng.xml.Parser.parse()Ljava/util/Collection;+385
+j  org.testng.xml.Parser.parse(Ljava/lang/String;Lorg/testng/xml/IPostProcessor;)Ljava/util/Collection;+9
+j  org.testng.TestNG.parseSuite(Ljava/lang/String;)V+66
+j  org.testng.TestNG.initializeSuitesAndJarFile()V+95
+j  org.testng.TestNG.initializeEverything()V+19
+j  org.testng.remote.support.RemoteTestNG6_12.initialize()V+5
+j  org.testng.remote.AbstractRemoteTestNG.run()V+51
+j  org.testng.remote.RemoteTestNG.initAndRun(Lorg/testng/remote/IRemoteTestNG;[Ljava/lang/String;Lorg/testng/CommandLineArgs;Lorg/testng/remote/RemoteArgs;)V+291
+j  org.testng.remote.RemoteTestNG.main([Ljava/lang/String;)V+341
+v  ~StubRoutines::call_stub
+
+siginfo: EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363), ExceptionInformation=0x0000000019930520 0x00000030550fc338 0x00000001800241f8 0x0000000180000000 
+
+
+Register to memory mapping:
+
+RIP=0x00007ffd686a4f69 KERNELBASE.dll
+RAX=0x00007ffd6865f5d0 ucrtbase.dll
+RBX=0x00000001800241f8 jvmhook.dll
+RCX=0x0000000000000002 is an unknown value
+RDX=0x0000017e1777db10 points into unknown readable memory: 0x00007ffd6862d1a0 | a0 d1 62 68 fd 7f 00 00
+RSP=0x00000030550fc1c0 is pointing into the stack for thread: 0x0000017e75edde00
+RBP=0x00000030550fc400 is pointing into the stack for thread: 0x0000017e75edde00
+RSI=0x00000030550fc338 is pointing into the stack for thread: 0x0000017e75edde00
+RDI=0x0000000019930520 is an unknown value
+R8 =0x0 is NULL
+R9 =0x0000000000000001 is an unknown value
+R10=0x00000000000006a6 is an unknown value
+R11=
